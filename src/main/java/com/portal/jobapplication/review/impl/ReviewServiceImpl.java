@@ -54,6 +54,9 @@ public class ReviewServiceImpl implements ReviewService {
 
     @Override
     public Review deleteById(int id) {
-        return reviewRepository.findById(id).orElse(null);
+        Review review = reviewRepository.findById(id).orElse(null);
+        if (review != null)
+            reviewRepository.deleteById(id);
+        return review;
     }
 }
