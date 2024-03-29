@@ -24,18 +24,20 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
-//    @OneToMany
-//    private List<Review> reviews;
+    @JsonIgnore
+    @OneToMany(mappedBy = "company")
+    private List<Review> reviews;
 
-    public Company() {
-    }
+    public Company() {}
 
-    public Company(int id, String name, String desc, String location, List<Job> jobs) {
+
+    public Company(int id, String name, String desc, String location, List<Job> jobs, List<Review> reviews) {
         this.id = id;
         this.name = name;
         this.desc = desc;
         this.location = location;
         this.jobs = jobs;
+        this.reviews = reviews;
     }
 
     public int getId() {
@@ -76,5 +78,12 @@ public class Company {
 
     public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
+    }
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 }

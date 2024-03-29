@@ -33,6 +33,7 @@ public class CompanyServiceImpl implements CompanyService {
             comp.setDesc(company.getDesc());
             comp.setLocation(company.getLocation());
             comp.setJobs(company.getJobs());
+            comp.setReviews(company.getReviews());
             companyRepository.save(comp);
         }
         return comp;
