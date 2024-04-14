@@ -12,17 +12,17 @@ public class Review {
     @GeneratedValue
     private int Id;
     private String title;
-    private String desc;
+    private String description;
 
     @ManyToOne
     private Company company;
 
     public Review() {}
 
-    public Review(int id, String title, String desc, Company company) {
+    public Review(int id, String title, String description, Company company) {
         Id = id;
         this.title = title;
-        this.desc = desc;
+        this.description = description;
         this.company = company;
     }
 
@@ -42,12 +42,12 @@ public class Review {
         this.title = title;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String desc) {
+        this.description = desc;
     }
 
     public Company getCompany() {

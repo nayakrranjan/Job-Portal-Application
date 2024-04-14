@@ -45,7 +45,7 @@ public class ReviewServiceImpl implements ReviewService {
         Review review = getById(id, companyId);
         if (review != null) {
             review.setTitle(requestBody.getTitle());
-            review.setDesc(requestBody.getDesc());
+            review.setDescription(requestBody.getDescription());
             review.setCompany(requestBody.getCompany());
             reviewRepository.save(review);
         }

@@ -17,7 +17,7 @@ public class Company {
     @GeneratedValue
     private int id;
     private String name;
-    private String desc;
+    private String about;
     private String location;
 
     @JsonIgnore
@@ -31,10 +31,10 @@ public class Company {
     public Company() {}
 
 
-    public Company(int id, String name, String desc, String location, List<Job> jobs, List<Review> reviews) {
+    public Company(int id, String name, String about, String location, List<Job> jobs, List<Review> reviews) {
         this.id = id;
         this.name = name;
-        this.desc = desc;
+        this.about = about;
         this.location = location;
         this.jobs = jobs;
         this.reviews = reviews;
@@ -56,12 +56,12 @@ public class Company {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getAbout() {
+        return about;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setAbout(String desc) {
+        this.about = desc;
     }
 
     public String getLocation() {

@@ -43,7 +43,7 @@ public class JobServiceImpl implements JobService {
         Job job = jobRepository.findById(id).orElse(null);
         if (job != null) {
             job.setTitle(requestBody.getTitle());
-            job.setDesc(requestBody.getDesc());
+            job.setDescription(requestBody.getDescription());
             job.setMinSal(requestBody.getMinSal());
             job.setMaxSal(requestBody.getMaxSal());
             job.setLocation(requestBody.getLocation());

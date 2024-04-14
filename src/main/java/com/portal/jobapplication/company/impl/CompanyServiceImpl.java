@@ -30,7 +30,7 @@ public class CompanyServiceImpl implements CompanyService {
         Company comp = companyRepository.findById(id).orElse(null);
         if (comp != null) {
             comp.setName(company.getName());
-            comp.setDesc(company.getDesc());
+            comp.setAbout(company.getAbout());
             comp.setLocation(company.getLocation());
             comp.setJobs(company.getJobs());
             comp.setReviews(company.getReviews());

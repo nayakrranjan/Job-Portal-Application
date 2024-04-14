@@ -10,7 +10,8 @@ public class Job {
     @GeneratedValue
     private int id;
     private String title;
-    private String desc;
+
+    private String description;
     private double minSal;
     private double maxSal;
     private String location;
@@ -20,10 +21,10 @@ public class Job {
 
     public Job() {}
 
-    public Job(int id, String title, String desc, double minSal, double maxSal, String location) {
+    public Job(int id, String title, String description, double minSal, double maxSal, String location) {
         this.id = id;
         this.title = title;
-        this.desc = desc;
+        this.description = description;
         this.minSal = minSal;
         this.maxSal = maxSal;
         this.location = location;
@@ -53,12 +54,12 @@ public class Job {
         this.title = title;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public double getMinSal() {
